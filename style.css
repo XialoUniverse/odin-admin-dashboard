@@ -51,6 +51,8 @@ h1, h2, h3, h4, h5, h6 {
 :root {
   --main-blue: rgb(18, 166, 220);
   --main-orange: rgb(229, 186, 15);
+  --main-gray: rgb(210, 210, 210);
+  --off-white: rgb(245, 245, 245);
 }
 
 ul li {
@@ -70,6 +72,7 @@ body {
   "nav header header"
   "nav main aside"
   ;
+  background-color: var(--main-gray);
 }
 
 img[src$=".svg"] {
@@ -79,8 +82,41 @@ img[src$=".svg"] {
 }
 
 header {
-  background-color: brown;
+  padding: 10px;
+  background-color: var(--off-white);
+  color: black;
   grid-area: header;
+  display: flex;
+  flex-direction: column;
+}
+
+.row-flexed {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+header .profile-image-container {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+header h1 {
+  width: max-content;
+}
+
+header * {
+  border: 2px solid red;
+}
+
+header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 nav {
