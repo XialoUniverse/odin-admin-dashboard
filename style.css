@@ -47,10 +47,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* styling */
+
 :root {
   --main-blue: rgb(18, 166, 220);
   --main-orange: rgb(229, 186, 15);
 }
+
+ul li {
+  list-style-type: none;
+}
+
+ul {
+  padding-left: 0px;
+}
+
 
 body {
   display: grid;
@@ -62,6 +72,12 @@ body {
   ;
 }
 
+img[src$=".svg"] {
+  height: 25px;
+  width: 25px;
+  display: inline;
+}
+
 header {
   background-color: brown;
   grid-area: header;
@@ -69,7 +85,38 @@ header {
 
 nav {
   background-color: var(--main-blue);
+  padding: 20px;
+  color: white;
   grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 40px;
+  font-size: 24px;
+}
+
+.logo {
+  font-size: 32px;
+}
+
+.main-links, .secondary-links {
+  margin-left: 10px;
+}
+
+nav li, .logo {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+}
+
+.main-links img, .secondary-links img {
+  margin-right: 15px;
+}
+
+nav .logo img {
+  height: 50px;
+  width: 50px;
 }
 
 main {
