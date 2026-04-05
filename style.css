@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Comucan';
+    src: url('./assets/fonts/Comucan-Regular.woff2') format('woff2'),
+        url('./assets/fontsComucan-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -52,6 +63,7 @@ h1, h2, h3, h4, h5, h6 {
   --main-blue: rgb(18, 166, 220);
   --main-orange: rgb(229, 186, 15);
   --main-gray: rgb(210, 210, 210);
+  --dark-gray: rgb(216, 216, 216);
   --off-white: rgb(245, 245, 245);
 }
 
@@ -73,6 +85,7 @@ body {
   "nav main aside"
   ;
   background-color: var(--main-gray);
+  font-family: 'Comucan', sans-serif;
 }
 
 img[src$=".svg"] {
@@ -82,7 +95,7 @@ img[src$=".svg"] {
 }
 
 header {
-  padding: 10px;
+  padding: 10px 30px;
   background-color: var(--off-white);
   color: black;
   grid-area: header;
@@ -99,10 +112,36 @@ header {
 
 
 header .profile-image-container {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+header .large-profile-image-container {
   height: 70px;
   width: 70px;
   border-radius: 50%;
   overflow: hidden;
+}
+
+header .search {
+  width: 60%;
+}
+
+header .search input {
+  background-color: var(--dark-gray);
+  width: 95%;
+  border: none;
+  border-radius: 20px;
+}
+
+header .search img {
+  margin-right: 20px;
+}
+
+header .right-upper-header {
+  width: 25%;
 }
 
 header h1 {
