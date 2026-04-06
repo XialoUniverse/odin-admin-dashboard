@@ -115,9 +115,9 @@ header {
 }
 
 
-header .profile-image-container {
-  height: 50px;
-  width: 50px;
+.profile-image-container {
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -219,13 +219,14 @@ nav .logo img {
 }
 
 main {
-  background-color: --main-gray;
+  background-color: var(--main-gray);
   grid-area: main;
   padding: 20px 10px;
 }
 
 main h1 {
   font-size: 20px;
+  font-weight: 300;
   margin-bottom: 5px;
 }
 
@@ -237,7 +238,6 @@ main .grid-container {
 
 main .card {
   padding: 20px 10px;
-  width: 250px;
   text-align: left;
   background-color: var(--off-white);
   display: flex;
@@ -268,6 +268,64 @@ main .icons {
 }
 
 aside {
-  background-color: yellowgreen;
+  background-color: var(--main-gray);
   grid-area: aside;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+aside h1 {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+aside .aside-card {
+  background-color: var(--off-white);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+aside .annouce-card h3 {
+  font-size: 13px;
+}
+
+aside .annouce-card p {
+  font-size: 10px;
+  font-weight: 100;
+  color: var(--text-gray);
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--main-gray);
+}
+
+aside .annouce-card h3:not(:first-child) {
+  padding-top: 10px;
+  border-bottom: 3px solid var(--main-gray);
+}
+
+aside .trending-card h4 {
+  font-size: 13px;
+}
+
+aside .trending-card p {
+  font-size: 10px;
+  font-weight: 100;
+  color: var(--text-gray);
+}
+
+aside .trending-card .user {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-auto-rows: 60px;
+  row-gap: 20px;
+  column-gap: 10px;
+  align-items: center;
 }
