@@ -60,10 +60,11 @@ h1, h2, h3, h4, h5, h6 {
 /* styling */
 
 :root {
-  --main-blue: rgb(18, 166, 220);
+  --main-blue: rgb(3, 151, 204);
   --main-orange: rgb(229, 186, 15);
   --main-gray: rgb(210, 210, 210);
   --dark-gray: rgb(216, 216, 216);
+  --very-dark-gray: rgb(157, 157, 157);
   --off-white: rgb(245, 245, 245);
 }
 
@@ -101,6 +102,7 @@ header {
   grid-area: header;
   display: flex;
   flex-direction: column;
+  border-bottom: 3px solid var(--very-dark-gray);
 }
 
 .row-flexed {
@@ -144,12 +146,32 @@ header .right-upper-header {
   width: 25%;
 }
 
-header h1 {
-  width: max-content;
+header .left-lower-header {
+  gap: 10px
+  
 }
 
-header * {
-  border: 2px solid red;
+header .left-lower-header h1 {
+  font-size: 24px;
+}
+  
+header .right-lower-header {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .right-lower-header button {
+  padding: 5px 25px;
+  color: white;
+  background-color: var(--main-blue);
+  border: none;
+  border-radius: 20px;
+}
+
+
+header h1 {
+  width: max-content;
 }
 
 header img {
