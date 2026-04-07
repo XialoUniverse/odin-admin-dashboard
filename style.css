@@ -209,6 +209,16 @@ nav li, .logo {
   align-items: center;
 }
 
+nav svg {
+  height: 25px;
+  width: 25px;
+}
+
+nav .logo svg {
+  height: 45px;
+  width: 45px;
+}
+
 .main-links img, .secondary-links img {
   margin-right: 15px;
 }
@@ -264,7 +274,11 @@ main .icons {
   display: flex;
   justify-content: space-between;
   width: 50%;
+}
 
+main .card svg {
+  width: 25px;
+  height: 25px;
 }
 
 aside {
